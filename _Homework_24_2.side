@@ -1,0 +1,115 @@
+{
+  "id": "22df0a19-14a2-41bd-b20c-81ec682d347a",
+  "version": "2.0",
+  "name": "_Homework_24_2",
+  "url": "https://www.saucedemo.com",
+  "tests": [{
+    "id": "dc213797-0f30-4391-a9da-f2b20270a4e4",
+    "name": "Test_login_locked_out_user",
+    "commands": [{
+      "id": "72df45d9-65f6-4c48-abae-717cbac8bd06",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e548774c-6a5f-4ab0-87ee-b5a46381624a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1076x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e0cea0c-a7f2-47b6-8c24-d10d84a770d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=user-name",
+      "targets": [
+        ["css=*[data-test=\"username\"]", "css:data-attr"],
+        ["id=user-name", "id"],
+        ["name=user-name", "name"],
+        ["css=#user-name", "css:finder"],
+        ["xpath=//input[@id='user-name']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "locked_out_user"
+    }, {
+      "id": "b86d7d3b-9060-4214-9ee4-b2dbc30740b2",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["css=*[data-test=\"password\"]", "css:data-attr"],
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "secret_sauce"
+    }, {
+      "id": "d7bc68a1-4300-42d4-843a-8b5631327283",
+      "comment": "",
+      "command": "click",
+      "target": "css=*[data-test=\"login-button\"]",
+      "targets": [
+        ["css=*[data-test=\"login-button\"]", "css:data-attr"],
+        ["id=login-button", "id"],
+        ["name=login-button", "name"],
+        ["css=#login-button", "css:finder"],
+        ["xpath=//input[@id='login-button']", "xpath:attributes"],
+        ["xpath=//div[@id='login_button_container']/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "656e9c7d-1058-4015-ad8e-ab9b7b8af921",
+      "comment": "",
+      "command": "click",
+      "target": "css=*[data-test=\"error\"]",
+      "targets": [
+        ["css=*[data-test=\"error\"]", "css:data-attr"],
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[3]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Epic sadface: Sorry, this user has been locked out.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2658622-c62b-4e3c-bcb2-6494cb89fad0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=*[data-test=\"error\"]",
+      "targets": [
+        ["css=*[data-test=\"error\"]", "css:data-attr"],
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='login_button_container']/div/form/div[3]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Epic sadface: Sorry, this user has been locked out.')]", "xpath:innerText"]
+      ],
+      "value": "Epic sadface: Sorry, this user has been locked out."
+    }, {
+      "id": "15cefbc9-ec56-44bf-8d38-3864a738d6bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-times",
+      "targets": [
+        ["css=.fa-times", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "717ef4fe-3db6-46f7-a136-56174f91632d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["dc213797-0f30-4391-a9da-f2b20270a4e4"]
+  }],
+  "urls": ["https://www.saucedemo.com/"],
+  "plugins": []
+}
